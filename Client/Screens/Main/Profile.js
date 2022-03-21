@@ -11,7 +11,7 @@ export default function Profile({ navigation }) {
 
 const styles = StyleSheet.create({
   server: {
-    backgroundColor: 'blue',
+    backgroundColor: 'red',
     borderRadius: 16,
     height: 128,
     width: 128,

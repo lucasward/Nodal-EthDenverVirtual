@@ -8,8 +8,10 @@ import AuthenticateUser from "../Screens/Main/AuthenticateUser";
 import Feed from "../Screens/Main/Feed";
 import Node from "../Screens/Main/Node";
 import Profile from "../Screens/Main/Profile"
-import ExampleServer from "../Screens/Servers/ExampleServer"
 import Wallet from "../Screens/Modals/Wallet"
+
+import ServerDetail from "../Screens/Detail/ServerDetail"
+import ModuleDetail from "../Screens/Detail/ModuleDetail"
 
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
@@ -27,13 +29,6 @@ function Root(): JSX.Element {
       inactiveColor="#EEEEEE"
       labeled={false}
       >
-      <Tab.Screen component={Feed} name="Feed"
-        options={{
-          tabBarIcon: ({ color, focused }) => {
-            return <FontAwesomeIcon icon={faCircle} color={color} size={20} />;
-          },
-        }}
-      />
       <Tab.Screen
         component={Node}
         name="Node"
@@ -41,15 +36,6 @@ function Root(): JSX.Element {
           tabBarIcon: ({ color }) => (
             <FontAwesomeIcon icon={faCircle} color={color} size={20} />
           ),
-        }}
-      />
-      <Tab.Screen
-        component={Profile}
-        name="Profile"
-        options={{
-          tabBarIcon: ({ color, focused }) => {
-            return <FontAwesomeIcon icon={faCircle} color={color} size={20} />;
-          },
         }}
       />
     </Tab.Navigator>
@@ -61,11 +47,12 @@ const Stack = createStackNavigator();
 function Navigation(): JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Root">
+      <Stack.Navigator initialRouteName="AuthenticateUser">
         <Stack.Screen component={AuthenticateUser} name="AuthenticateUser" options={{ headerShown: false }} />
         <Stack.Group>
           <Stack.Screen component={Root} name="Root" options={{ headerShown: false }} />
-          <Stack.Screen component={ExampleServer} name="ExampleServer" options={{ headerShown: false }} />
+          <Stack.Screen component={ServerDetail} name="ServerDetail" options={{ headerShown: false }} />
+          <Stack.Screen component={ModuleDetail} name="ModuleDetail" options={{ headerShown: false }} />
         </Stack.Group>
         <Stack.Screen component={Wallet} name="Wallet" options={{ headerShown: false }} />
       </Stack.Navigator>

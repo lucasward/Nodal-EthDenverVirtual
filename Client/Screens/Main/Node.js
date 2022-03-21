@@ -1,10 +1,12 @@
 import React from "react";
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import ServerCarousel from "../../Components/Custom/ServerCarousel";
+
 export default function Node({ navigation }) {
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => navigation.push('ExampleServer')} style={styles.server} />
+      <ServerCarousel />
     </View>
   );
 }
