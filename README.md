@@ -25,7 +25,7 @@ npm i -g expo-cli
 Install all dependencies:
 
 ```sh
-cd Nodal
+cd Nodal-EthDenverVirtual
 yarn install
 cd ios
 pod install
