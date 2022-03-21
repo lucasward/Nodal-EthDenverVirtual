@@ -13,7 +13,7 @@ Please check the [official documentation of Moralis](https://docs.moralis.io/#us
 # Quick Start
 
 ```sh
-git clone https://github.com/Nodal-io/Nodal.git
+git clone https://github.com/lucasward/Nodal-EthDenverVirtual.git
 ```
 
 Install the expo CLI globally:
