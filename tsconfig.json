@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["index.d.ts"],
+    "types": ["node", "jest"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "frontend/Components/Chat/iframe.js", "frontend/Components/Chat/Webview0.js", "frontend/Components/Chat/Webview0.js"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.ts"
+  ],
+  //"extends": "expo/tsconfig.base"
+}
